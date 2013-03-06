@@ -1,0 +1,24 @@
+//
+// Prefix header for all source files of the 'StackEM' target in the 'StackEM' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+	#import <UIKit/UIKit.h>
+#endif
+
+#ifdef SHOrientationLandScape
+#define SCREEN_WIDTH	[[UIScreen mainScreen] bounds].size.height
+#define SCREEN_HEIGHT	[[UIScreen mainScreen] bounds].size.width
+#define RATE_WIDTH		(SCREEN_WIDTH / 480)
+#define RATE_HEIGHT		(SCREEN_HEIGHT / 320)
+#define RATE_WIDTH1		(SCREEN_WIDTH / 1024)
+#define RATE_HEIGHT1	(SCREEN_HEIGHT / 768)
+#else
+#define SCREEN_WIDTH	[[UIScreen mainScreen] bounds].size.width
+#define SCREEN_HEIGHT	[[UIScreen mainScreen] bounds].size.height
+#define RATE_WIDTH		(SCREEN_WIDTH / 320)
+#define RATE_HEIGHT		(SCREEN_HEIGHT / 480)
+#define RATE_WIDTH1		(SCREEN_WIDTH / 768)
+#define RATE_HEIGHT1	(SCREEN_HEIGHT / 1024)
+#endif
